@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>cecilia qian — UI/UX portfolio</title>
+<meta name="description" content="Cecilia Qian — product design &amp; product management portfolio.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Cormorant+Garamond:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- fixed header: stays on top; "work" gets underlined in the work section -->
+<header class="site-nav">
+  <nav>
+    <a class="nav-about" href="about.html">about</a>
+    <a class="nav-work" href="#work">work</a>
+    <a class="nav-resume" href="resume.html" data-soon>resume</a>
+  </nav>
+</header>
+
+<div class="stage">
+
+<!-- falling pixels live only in the strip between the home page and the work page -->
+<canvas class="pixel-gap" aria-hidden="true"></canvas>
+
+<main class="hero">
+
+
+  <!-- decorative teal squares -->
+  <span class="sq sq-a" aria-hidden="true"></span>
+  <span class="sq sq-b" aria-hidden="true"></span>
+  <span class="sq sq-c" aria-hidden="true"></span>
+  <span class="sq sq-d" aria-hidden="true"></span>
+  <span class="sq sq-e" aria-hidden="true"></span>
+  <span class="sq sq-f" aria-hidden="true"></span>
+  <span class="sq sq-g" aria-hidden="true"></span>
+  <span class="sq sq-h" aria-hidden="true"></span>
+  <span class="sq sq-i" aria-hidden="true"></span>
+  <span class="sq sq-j" aria-hidden="true"></span>
+  <span class="sq sq-k" aria-hidden="true"></span>
+
+  <!-- vertical contact text -->
+  <a class="contact-vertical" href="mailto:ceqian@ucsd.edu">contact me here: ceqian@ucsd.edu</a>
+
+  <!-- intro paragraph -->
+  <p class="intro">
+    cecilia aspires to enter<br>
+    the product field through product<br>
+    management or design<br>
+    &mdash; communicating, connecting,<br>
+    and delivering a shared experience
+  </p>
+
+  <!-- image placeholder block -->
+  <div class="hero-image">
+    <img class="hero-doodle hero-doodle-dog" src="assets/doodle-dog.png" alt="" draggable="false">
+    <canvas class="hero-canvas" aria-hidden="true"></canvas>
+    <button class="hero-clear" type="button" aria-label="Clear doodle">&#8635;</button>
+  </div>
+
+  <span class="click-here">[doodle over the box]</span>
+
+  <!-- big bracketed name -->
+  <h1 class="hero-name">
+    <span class="row row1"><span class="bracket">[</span><span class="word">cecilia</span></span>
+    <span class="row row2"><span class="word">qian</span><span class="bracket">]</span></span>
+  </h1>
+
+</main>
+
+<!-- ===================== SIDEBAR (slides in over the home page) ===================== -->
+<aside class="sidebar" aria-label="About Cecilia">
+  <div class="sb-slide">
+    <span class="sb-bg" aria-hidden="true"></span>
+
+    <span class="w-sq" style="--x:0%;--y:1.95%" aria-hidden="true"></span>
+    <span class="w-sq" style="--x:4.52%;--y:1.95%" aria-hidden="true"></span>
+    <span class="w-sq" style="--x:0%;--y:5.8%" aria-hidden="true"></span>
+
+    <a class="w-vertical" href="mailto:ceqian@ucsd.edu">contact me here: ceqian@ucsd.edu</a>
+
+    <p class="w-hello" style="--y:13.35%">hello,<br>my name is cecilia!</p>
+
+    <p class="w-blurb" style="--y:21.35%">
+      designer interested in enter the product<br>
+      field through product design or<br>
+      management &mdash; communicating,<br>
+      connecting, and delivering a shared<br>
+      experience
+    </p>
+
+    <a class="w-link" style="--y:34.27%" href="mailto:ceqian@ucsd.edu"><svg class="w-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M2.6 13.4L10 6" fill="none" stroke="currentColor" stroke-width="3.6"/><path d="M5.4 2.2H13.8V10.6Z" fill="currentColor"/></svg><span>email</span></a>
+    <a class="w-link" style="--y:37%" href="resume.html" data-soon><svg class="w-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M2.6 13.4L10 6" fill="none" stroke="currentColor" stroke-width="3.6"/><path d="M5.4 2.2H13.8V10.6Z" fill="currentColor"/></svg><span>resume</span></a>
+    <a class="w-link" style="--y:39.6%" href="https://www.linkedin.com/in/qcecilian" target="_blank" rel="noopener"><svg class="w-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M2.6 13.4L10 6" fill="none" stroke="currentColor" stroke-width="3.6"/><path d="M5.4 2.2H13.8V10.6Z" fill="currentColor"/></svg><span>linkedin</span></a>
+
+    <p class="w-skills" style="--y:44.67%">
+      [product design]<br>
+      [product management]<br>
+      [UI/UX]
+    </p>
+  </div>
+</aside>
+
+<!-- ===================== WORK / PROJECTS ===================== -->
+<section class="work" id="work">
+
+
+  <!-- decorative teal squares -->
+  <span class="w-sq" style="--x:23.29%;--y:56.4%" aria-hidden="true"></span>
+  <span class="w-sq" style="--x:11.25%;--y:66.15%" aria-hidden="true"></span>
+  <span class="w-sq" style="--x:11.25%;--y:70.3%" aria-hidden="true"></span>
+  <span class="w-sq" style="--x:0%;--y:81.75%" aria-hidden="true"></span>
+  <span class="w-sq" style="--x:98%;--y:50.25%" aria-hidden="true"></span>
+  <span class="w-sq" style="--x:98%;--y:54.1%" aria-hidden="true"></span>
+  <span class="w-sq" style="--x:98%;--y:57.95%" aria-hidden="true"></span>
+
+  <div class="w-projects">
+
+    <h2 class="w-heading" style="--x:29.81%;--y:13.45%">[ current projects ]</h2>
+
+    <!-- Follett -->
+    <a class="w-card" href="follett.html" aria-label="Follett Website Redesign — open case study">
+      <img class="w-img" style="--x:30.13%;--y:21.3%;--w:29.92%" src="assets/project-follett.png" alt="Follett website redesign — catalog search screen">
+      <span class="w-sq w-sq-proj" style="--x:30.18%;--y:36.05%;--hl:32%" aria-hidden="true"></span>
+      <span class="w-name" style="--x:32.14%;--y:36.08%">[Follett Website Redesign]</span>
+      <span class="w-desc" style="--x:32.51%;--y:38.675%">Redesign of high school librarian platform, Follett, to <br>streamline the cataloguing process</span>
+      <span class="w-tag" style="--x:32.6%;--y:42.6%">UI/UX</span>
+    </a>
+
+    <!-- Solanum -->
+    <a class="w-card" href="solanum.html" aria-label="Solanum — open case study">
+      <img class="w-img" style="--x:64.77%;--y:27.05%;--w:29.86%" src="assets/project-solanum.png" alt="Solanum urban gardening website — welcome screen">
+      <span class="w-sq w-sq-proj" style="--x:64.77%;--y:44.75%;--hl:12.9%" aria-hidden="true"></span>
+      <span class="w-name" style="--x:66.74%;--y:44.8%">[Solanum]</span>
+      <span class="w-desc" style="--x:67.11%;--y:47.375%">Created a website introducing urban gardening around <br>UCSD campus, end to end process from ideation to <br>deployment</span>
+      <span class="w-tag" style="--x:67.2%;--y:52.75%">UI/UX</span>
+      <span class="w-tag" style="--x:71.1%;--y:52.75%">FRONTEND</span>
+    </a>
+
+    <!-- Maverix -->
+    <a class="w-card" href="maverix.html" aria-label="Maverix — open case study">
+      <img class="w-img" style="--x:29.81%;--y:55.65%;--w:31.23%" src="assets/project-maverix.png" alt="Maverix virtual reality concert — avatar on a stage">
+      <span class="w-sq w-sq-proj" style="--x:29.86%;--y:73.35%;--hl:12.9%" aria-hidden="true"></span>
+      <span class="w-name" style="--x:31.84%;--y:73.4%">[Maverix]</span>
+      <span class="w-desc" style="--x:32.21%;--y:75.975%">Concert experience hosted through the <br>immersive medium of virtual reality</span>
+      <span class="w-tag" style="--x:32.3%;--y:79.55%">VISUAL DESIGN</span>
+    </a>
+
+    <!-- HandsOn San Diego -->
+    <a class="w-card" href="handson.html" aria-label="HandsOn San Diego — open case study">
+      <img class="w-img" style="--x:64.77%;--y:60.3%;--w:24.13%" src="assets/project-handson.png" alt="HandsOn San Diego brand guidelines">
+      <span class="w-sq w-sq-proj" style="--x:64.77%;--y:89.85%;--hl:24%" aria-hidden="true"></span>
+      <span class="w-name" style="--x:66.54%;--y:89.9%">[HandsOn San Diego]</span>
+      <span class="w-desc" style="--x:66.91%;--y:92.475%">HandsOn San Diego social media redesign on <br>platforms Instagram and Constant Contact.</span>
+      <span class="w-tag" style="--x:66.98%;--y:96.9%">VISUAL DESIGN</span>
+      <span class="w-tag" style="--x:75.4%;--y:96.9%">MARKETING</span>
+    </a>
+
+    <!-- Playground -->
+    <a class="w-card" href="playground.html" aria-label="Playground — open page">
+      <span class="w-sq w-sq-proj" style="--x:29.86%;--y:96.5%" aria-hidden="true"></span>
+      <span class="w-sq w-sq-proj" style="--x:33.91%;--y:96.5%" aria-hidden="true"></span>
+      <span class="w-sq w-sq-proj" style="--x:37.96%;--y:96.5%;--hl:17.9%" aria-hidden="true"></span>
+      <span class="w-name" style="--x:41.5%;--y:96.55%">[Playground]</span>
+    </a>
+
+  </div>
+
+</section>
+
+</div><!-- /.stage -->
+
+<!-- email overlay: opens when any email link is pressed, click anywhere to close -->
+<div class="email-zoom" id="emailZoom" role="dialog" aria-modal="true" aria-label="Email address" aria-hidden="true" tabindex="-1">
+  <span class="ez-text">ceqian@ucsd.edu</span>
+  <span class="ez-hint">[click anywhere to exit]</span>
+</div>
+
+<script>
+(function () {
+  var box = document.querySelector('.hero-image');
+  var canvas = document.querySelector('.hero-canvas');
+  var clearBtn = document.querySelector('.hero-clear');
+  if (!box || !canvas || !canvas.getContext) return;
+
+  var ctx = canvas.getContext('2d');
+  var PIXEL = 5;      // px size of each drawn square
+  var MIN_DIST = 4;   // px — skip new points too close to the last one
+  var lastPoint = null;
+  var isDrawing = false;
+
+  function resize() {
+    var rect = box.getBoundingClientRect();
+    var dpr = window.devicePixelRatio || 1;
+    canvas.width = rect.width * dpr;
+    canvas.height = rect.height * dpr;
+    canvas.style.width = rect.width + 'px';
+    canvas.style.height = rect.height + 'px';
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  function drawAt(e) {
+    var rect = box.getBoundingClientRect();
+    var x = e.clientX - rect.left;
+    var y = e.clientY - rect.top;
+    if (lastPoint && Math.hypot(x - lastPoint.x, y - lastPoint.y) < MIN_DIST) return;
+    lastPoint = { x: x, y: y };
+    ctx.fillStyle = '#111111';
+    ctx.fillRect(x - PIXEL / 2, y - PIXEL / 2, PIXEL, PIXEL);
+  }
+
+  box.addEventListener('mousedown', function (e) {
+    if (clearBtn && clearBtn.contains(e.target)) return;
+    isDrawing = true;
+    lastPoint = null;
+    drawAt(e);
+  });
+
+  box.addEventListener('mousemove', function (e) {
+    if (!isDrawing) return;
+    drawAt(e);
+  });
+
+  window.addEventListener('mouseup', function () {
+    isDrawing = false;
+    lastPoint = null;
+  });
+
+  box.addEventListener('mouseleave', function () {
+    lastPoint = null;
+  });
+
+  if (clearBtn) {
+    clearBtn.addEventListener('click', function () {
+      ctx.clearRect(0, 0, box.clientWidth, box.clientHeight);
+    });
+  }
+})();
+</script>
+
+<script>
+// Natural scroll. The home page just scrolls away. Once the teal box (and its
+// label) has been scrolled completely out of view, the sidebar fades in.
+(function () {
+  var root = document.documentElement;
+  var hero = document.querySelector('.hero');
+  var work = document.querySelector('.work');
+  var label = document.querySelector('.click-here');
+  if (!hero || !work || !label) return;
+
+  var mobile = window.matchMedia('(max-width: 760px)');
+  var startY = 0;
+
+  function clamp(v) { return Math.min(1, Math.max(0, v)); }
+  function ease(t) { return t * t * (3 - 2 * t); }
+
+  function measure() {
+    // start a little early: when the label reaches the header row
+    startY = label.getBoundingClientRect().bottom + window.scrollY - Math.min(window.innerWidth, 2000) * 0.15;
+  }
+
+  function update() {
+    var sy = window.scrollY;
+    root.classList.toggle('scrolled', sy > 20);
+    root.classList.toggle('at-top', sy < 10);
+    root.classList.toggle('in-work', work.getBoundingClientRect().top < window.innerHeight * 0.55);
+
+    if (mobile.matches) { root.classList.remove('sb-on'); return; }
+
+    // fully in by the time the work section reaches the top of the screen
+    var span = Math.max(60, hero.offsetHeight - startY);
+    var s = ease(clamp((sy - startY) / span));
+    root.style.setProperty('--fi', s.toFixed(3));
+    // the backing fades in later, so the text blends over the teal box first
+    root.style.setProperty('--bg', ease(clamp((s - 0.25) / 0.75)).toFixed(3));
+    root.classList.toggle('sb-on', s > 0.02);
+  }
+
+  // Menu: visible at the very top, appears while scrolling or when the mouse is
+  // near the top edge, and fades away again when you are still.
+  var navTimer = null, overTop = false;
+  function showNav() {
+    root.classList.add('nav-show');
+    clearTimeout(navTimer);
+    navTimer = setTimeout(function () {
+      if (!overTop) root.classList.remove('nav-show');
+    }, 1400);
+  }
+  window.addEventListener('scroll', showNav, { passive: true });
+  window.addEventListener('mousemove', function (e) {
+    var near = e.clientY < Math.min(window.innerWidth, 2000) * 0.09;
+    if (near || overTop) showNav();
+    overTop = near;
+  });
+  showNav();
+
+  function remeasure() { measure(); update(); }
+
+  window.addEventListener('scroll', update, { passive: true });
+  window.addEventListener('resize', remeasure);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(remeasure);
+  window.addEventListener('load', remeasure);
+  remeasure();
+})();
+</script>
+
+<script>
+// Falling teal pixels, only in the strip between the home page and the work
+// page. Pixels hop down one grid cell at a time, fading in at the top and out
+// at the bottom.
+(function () {
+  var canvas = document.querySelector('.pixel-gap');
+  if (!canvas || !canvas.getContext) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  var mobile = window.matchMedia('(max-width: 760px)');
+  var ctx = canvas.getContext('2d');
+  var CELL = 0.022;          // cell size as a fraction of the width
+  var RATE = 0.015;          // new pixels per column per second
+  var W = 0, H = 0, cell = 0, cols = 0, rows = 0;
+  var drops = [], acc = 0, last = 0, running = false, visible = false;
+
+  function step(dt) {
+    acc += dt * RATE * cols;
+    while (acc >= 1) {
+      acc -= 1;
+      if (drops.length < Math.ceil(cols * 0.12)) {
+        var len = Math.random() < 0.3 ? 2 : 1;
+        drops.push({ c: Math.floor(Math.random() * cols), y: -len, v: 1.4 + Math.random() * 2.2, len: len });
+      }
+    }
+    drops.forEach(function (d) { d.y += d.v * dt; });
+    drops = drops.filter(function (d) { return d.y < rows; });
+  }
+
+  function draw() {
+    ctx.clearRect(0, 0, W, H);
+    ctx.fillStyle = '#D1E3E3';
+    drops.forEach(function (d) {
+      for (var k = 0; k < d.len; k++) {
+        var row = Math.floor(d.y) + k;
+        if (row < 0 || row >= rows) continue;
+        var fadeIn = Math.min(1, (row + 1) / 2);
+        var fadeOut = Math.min(1, (rows - row) / Math.max(2, rows * 0.35));
+        ctx.globalAlpha = Math.max(0, Math.min(fadeIn, fadeOut));
+        ctx.fillRect(Math.round(d.c * cell + (W - cols * cell) / 2), Math.round(row * cell), Math.ceil(cell), Math.ceil(cell));
+      }
+    });
+    ctx.globalAlpha = 1;
+  }
+
+  function frame(t) {
+    if (!running) return;
+    var dt = Math.min(0.05, (t - last) / 1000 || 0);
+    last = t;
+    step(dt);
+    draw();
+    requestAnimationFrame(frame);
+  }
+
+  function start() {
+    if (running || !visible || mobile.matches || document.hidden) return;
+    running = true;
+    last = performance.now();
+    requestAnimationFrame(frame);
+  }
+
+  function size() {
+    W = canvas.clientWidth; H = canvas.clientHeight;
+    var dpr = window.devicePixelRatio || 1;
+    canvas.width = Math.round(W * dpr);
+    canvas.height = Math.round(H * dpr);
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    cell = W * CELL;
+    cols = Math.max(1, Math.floor((W * 0.94) / cell));
+    rows = Math.max(1, Math.floor(H / cell));
+    drops = []; acc = 0;
+    for (var n = 0; n < 50; n++) step(0.1);
+    draw();
+  }
+
+  size();
+  window.addEventListener('resize', size);
+  document.addEventListener('visibilitychange', function () {
+    if (document.hidden) running = false; else start();
+  });
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(function (entries) {
+      visible = entries[0].isIntersecting;
+      if (visible) start(); else running = false;
+    }).observe(canvas);
+  } else { visible = true; start(); }
+})();
+</script>
+
+<script>
+// Pressing any email link zooms the address in to fill the screen. Click (or press a key) anywhere to go back as if nothing happened.
+(function () {
+  var zoom = document.getElementById('emailZoom');
+  if (!zoom) return;
+  var lastFocus = null;
+
+  function open(e) {
+    e.preventDefault();
+    var r = e.currentTarget.getBoundingClientRect();
+    zoom.style.setProperty('--ox', (r.left + r.width / 2) + 'px');
+    zoom.style.setProperty('--oy', (r.top + r.height / 2) + 'px');
+    lastFocus = e.currentTarget;
+    zoom.setAttribute('aria-hidden', 'false');
+    void zoom.offsetWidth;
+    zoom.classList.add('open');
+    zoom.focus({ preventScroll: true });
+  }
+
+  function close() {
+    if (!zoom.classList.contains('open')) return;
+    zoom.classList.remove('open');
+    zoom.setAttribute('aria-hidden', 'true');
+    if (lastFocus) lastFocus.focus({ preventScroll: true });
+  }
+
+  document.querySelectorAll('a[href^="mailto:"]').forEach(function (a) {
+    a.addEventListener('click', open);
+  });
+  zoom.addEventListener('click', close);
+  zoom.addEventListener('keydown', close);
+  zoom.addEventListener('wheel', function (e) { e.preventDefault(); }, { passive: false });
+  zoom.addEventListener('touchmove', function (e) { e.preventDefault(); }, { passive: false });
+})();
+</script>
+
+<script src="js/soon.js" defer></script>
+</body>
+</html>

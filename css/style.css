@@ -1,0 +1,893 @@
+/* ---------------------------------------------------
+   cecilia qian — portfolio
+   font: Courier Prime (+ Cormorant Garamond for blurbs) | teal: #D1E3E3
+--------------------------------------------------- */
+
+:root {
+  --teal: #D1E3E3;
+  --paper: #F6F6F3;
+  --ink: #111111;
+  --gray: #3a3a3a;
+  --font: 'Courier Prime', 'Courier New', Courier, monospace;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--paper);
+  font-family: var(--font);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ===================================================
+   HERO — recreates the 2000x1300 Figma frame.
+   container-type lets us scale everything (position +
+   type) together with cqw units, just like a Figma
+   frame scaling proportionally.
+=================================================== */
+
+.hero {
+  position: relative;
+  width: 100%;
+  max-width: 2000px;
+  margin: 0 auto;
+  aspect-ratio: 2000 / 1300;
+  overflow: hidden;
+  container-type: inline-size;
+  background: var(--paper);
+}
+
+/* ---------- decorative teal squares ---------- */
+
+.sq {
+  position: absolute;
+  background: var(--teal);
+  display: block;
+}
+
+.sq-a { left: -0.75%; top: 2.9%;   width: 2.6%; height: 4.0%; }
+.sq-b { left: -0.75%; top: 11.4%;  width: 2.6%; height: 4.0%; }
+.sq-c { left: 27.65%; top: 21.4%;  width: 2.1%; height: 3.2%; }
+.sq-d { left: 48.15%; top: 29.9%;  width: 2.3%; height: 3.5%; }
+.sq-e { left: 44.65%; top: 39.9%;  width: 2.3%; height: 3.5%; }
+.sq-f { left: 52.4%;  top: 53.6%;  width: 2.1%; height: 3.2%; }
+.sq-g { left: 59.6%;  top: 53.6%;  width: 2.1%; height: 3.2%; }
+.sq-h { left: 66.6%;  top: 65.0%;  width: 2.3%; height: 3.5%; }
+.sq-i { left: 97.5%;  top: 80.8%;  width: 2.5%; height: 3.85%; }
+.sq-j { left: 97.5%;  top: 88.3%;  width: 2.5%; height: 3.85%; }
+.sq-k { left: 97.5%;  top: 95.8%;  width: 2.5%; height: 3.85%; }
+
+/* ---------- nav ---------- */
+
+.nav {
+  position: absolute;
+  top: 3.1%;
+  left: 0;
+  width: 100%;
+  height: 6%;
+  font-size: 2.1cqw;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+.nav a {
+  position: absolute;
+  top: 0;
+  white-space: nowrap;
+  transition: opacity 0.15s ease;
+}
+
+.nav a:nth-child(1) { left: 50.3%; }
+.nav a:nth-child(2) { left: 71%; }
+.nav a:nth-child(3) { right: 1.75%; }
+
+.nav a:hover {
+  opacity: 0.55;
+}
+
+/* ---------- vertical contact link ---------- */
+
+.contact-vertical {
+  position: absolute;
+  left: 0.7%;
+  top: 34%;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-size: 0.85cqw;
+  letter-spacing: 0.12em;
+  color: var(--gray);
+  white-space: nowrap;
+}
+
+.contact-vertical:hover {
+  color: var(--ink);
+}
+
+/* ---------- intro paragraph ---------- */
+
+
+.intro {
+  position: absolute;
+  left: 5.25%;
+  top: 27.7%;
+  width: 39%;
+  margin: 0;
+  font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+  font-size: 2.15cqw;
+  line-height: 1.15;
+  color: var(--ink);
+}
+
+/* ---------- image placeholder block ---------- */
+
+.hero-image {
+  position: absolute;
+  left: 5.25%;
+  top: 50%;
+  width: 40%;
+  height: 30%;
+  background: var(--teal);
+  user-select: none;
+}
+
+.hero-doodle {
+  position: absolute;
+  width: auto;
+}
+
+.hero-doodle-person {
+  left: 0;
+  bottom: 0;
+  height: 35%;
+}
+
+.hero-doodle-dog {
+  right: -2%;
+  top: -16%;
+  height: 20%;
+}
+
+.hero-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.hero-clear {
+  position: absolute;
+  right: 0.8%;
+  bottom: 0.8%;
+  width: 2.4cqw;
+  height: 2.4cqw;
+  min-width: 22px;
+  min-height: 22px;
+  border: 1.5px solid var(--ink);
+  border-radius: 50%;
+  background: #f6f6f3cc;
+  color: var(--ink);
+  font-family: var(--font);
+  font-size: 1.3cqw;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+  transition: opacity 0.15s ease;
+}
+
+.hero-clear:hover {
+  opacity: 0.6;
+}
+
+.click-here {
+  position: absolute;
+  right: 54.75%;
+  top: 80.6%;
+  color: var(--ink);
+  font-size: 1.6cqw;
+  font-weight: 400;
+  white-space: nowrap;
+  transition: opacity 0.15s ease;
+}
+
+.click-here:hover {
+  opacity: 0.55;
+}
+
+/* ---------- big bracketed name ---------- */
+
+.hero-name {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  font-weight: 400;
+  pointer-events: none;
+}
+
+.hero-name .row {
+  position: absolute;
+  display: flex;
+  align-items: baseline;
+  font-size: 7.2cqw;
+  line-height: 1;
+}
+
+.hero-name .row1 {
+  left: 50.75%;
+  top: 35%;
+  gap: 1.4cqw;
+  justify-content: flex-start;
+}
+
+.hero-name .row2 {
+  right: 1.75%;
+  top: 57.5%;
+  gap: 1.4cqw;
+  justify-content: flex-end;
+}
+
+.hero-name .bracket {
+  font-weight: 400;
+}
+
+/* ===================================================
+   RESPONSIVE — below ~760px the pixel-precise hero
+   folds into a simple stacked layout.
+=================================================== */
+
+@media (max-width: 760px) {
+
+  .hero {
+    aspect-ratio: auto;
+    padding: 90px 24px 60px;
+    overflow: visible;
+    container-type: normal;
+  }
+
+  .sq-i, .sq-j, .sq-k, .sq-a, .sq-b { display: none; }
+
+  .sq-c, .sq-d, .sq-e, .sq-f, .sq-g, .sq-h {
+    position: static;
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    margin: 0 6px 6px 0;
+  }
+
+  .nav {
+    position: absolute;
+    top: 28px;
+    right: 24px;
+    left: 24px;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+  }
+
+  .nav a {
+    position: static;
+    left: auto;
+  }
+
+  .contact-vertical {
+    position: static;
+    display: block;
+    writing-mode: horizontal-tb;
+    transform: none;
+    font-size: 12px;
+    margin-bottom: 28px;
+  }
+
+  .intro {
+    position: static;
+    width: 100%;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 24px;
+  }
+
+  .hero-image {
+    position: relative;
+    width: 100%;
+    height: 220px;
+    margin-bottom: 16px;
+  }
+
+  .click-here {
+    position: static;
+    display: inline-block;
+    float: right;
+    font-size: 13px;
+    margin-top: 8px;
+    margin-bottom: 32px;
+  }
+
+  .hero-name {
+    position: static;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .hero-name .row {
+    position: static;
+    font-size: 15vw;
+    width: 100%;
+  }
+
+  .hero-name .row2 {
+    padding-left: 20%;
+  }
+}
+
+/* ===================================================
+   PLACEHOLDER SUB-PAGES (about / work / resume)
+=================================================== */
+
+.placeholder-page {
+  position: relative;
+  min-height: 100vh;
+  padding: 40px 5% 0;
+}
+
+.nav-static {
+  position: static;
+  display: flex;
+  justify-content: flex-end;
+  gap: 60px;
+  font-size: 22px;
+  font-weight: 400;
+  margin-bottom: 0;
+}
+
+.nav-static a {
+  position: static;
+  left: auto;
+  right: auto;
+}
+
+.nav-static a:hover { opacity: 0.55; }
+
+.placeholder-copy {
+  margin-top: 40vh;
+  text-align: center;
+  font-size: 24px;
+  color: var(--gray);
+}
+
+/* ===================================================
+   FIXED HEADER — one header for the whole page.
+   "work" gets underlined once the work section is
+   in view (html.in-work).
+=================================================== */
+
+.site-nav {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 2000px;
+  height: calc(min(100vw, 2000px) * 0.085);
+  z-index: 50;
+  container-type: inline-size;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+/* the menu shows at the very top, while scrolling, and while hovering the top edge */
+.at-top .site-nav,
+.nav-show .site-nav,
+.site-nav:focus-within { opacity: 1; }
+
+.site-nav nav {
+  position: absolute;
+  inset: 0;
+  font-family: var(--font);
+  font-size: 2.1cqw;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  line-height: 1;
+}
+
+.site-nav a {
+  position: absolute;
+  top: 2.02cqw;
+  white-space: nowrap;
+  color: var(--ink);
+  pointer-events: none;
+  transition: opacity 0.15s ease;
+}
+
+.at-top .site-nav a,
+.nav-show .site-nav a,
+.site-nav:focus-within a { pointer-events: auto; }
+
+.site-nav a:hover { opacity: 0.55; }
+
+.site-nav .nav-about  { left: 50.3%; }
+.site-nav .nav-work   { left: 71%; }
+.site-nav .nav-resume { right: 1.75%; }
+
+.site-nav .nav-work::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: calc(100% + 0.08em);
+  height: 0.14cqw;
+  min-height: 2px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.4s ease;
+}
+
+.in-work .site-nav .nav-work::after { transform: scaleX(1); }
+
+/* ===================================================
+   STAGE — natural scroll. The home page scrolls away
+   normally; its intro + email glide into the sidebar
+   (see the script at the bottom of index.html).
+=================================================== */
+
+.stage { position: relative; }
+
+
+
+html { scroll-behavior: smooth; }
+
+/* ===================================================
+   WORK / PROJECTS — recreates the 1902x2000 Figma
+   frame. 1cqw = 1% of the frame width, so every size
+   scales with the page.
+   Design sizes (px at the original 1280px frame):
+   body 16 | heading 32 | name 24 | desc 15 | tag 14
+=================================================== */
+
+.work {
+  position: relative;
+  width: 100%;
+  max-width: 2000px;
+  margin: 0 auto;
+  aspect-ratio: 1902 / 2000;
+  overflow: hidden;
+  container-type: inline-size;
+  background: var(--paper);
+  color: #000000;
+}
+
+.w-sq {
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  width: 2%;
+  aspect-ratio: 1 / 1;
+  background: var(--teal);
+  display: block;
+}
+
+/* ---------- sidebar ---------- */
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: calc(50vw - min(50vw, 1000px));
+  width: min(100vw, 2000px);
+  height: calc(min(100vw, 2000px) * 2000 / 1902);
+  z-index: 40;
+  container-type: inline-size;
+  overflow: hidden;
+  pointer-events: none;
+  color: #000000;
+  font-family: var(--font);
+}
+
+.sb-slide {
+  position: absolute;
+  inset: 0;
+  transform: translateX(calc((1 - var(--fi, 0)) * -4cqw));
+  visibility: hidden;
+}
+
+.sb-on .sb-slide { visibility: visible; }
+
+.sb-slide > * { pointer-events: auto; }
+
+.sb-slide > :not(.sb-bg) { opacity: var(--fi, 0); }
+
+.sb-bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 28.5%;
+  height: 54%;
+  background: var(--paper);
+  opacity: var(--bg, 0);
+}
+
+.w-vertical {
+  position: absolute;
+  left: 0.47%;
+  top: 21.35%;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-size: 0.9375cqw;
+  white-space: nowrap;
+}
+
+.w-hello,
+.w-blurb,
+.w-skills {
+  position: absolute;
+  left: 3.9%;
+  top: var(--y);
+  margin: 0;
+  white-space: nowrap;
+}
+
+.w-hello  { font-size: 1.25cqw; line-height: 1.55; }
+.w-blurb  {
+  font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+  font-size: 1.25cqw;
+  line-height: 1.57;
+}
+.w-skills { font-size: 1.25cqw; line-height: 1.556; }
+
+.w-link {
+  position: absolute;
+  left: 3.83%;
+  top: var(--y);
+  display: flex;
+  align-items: baseline;
+  font-size: 1.25cqw;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.w-link:hover { opacity: 0.55; }
+
+.w-arrow {
+  width: 0.72em;
+  height: 0.72em;
+  margin-right: 1.13em;
+  flex: none;
+}
+
+/* ---------- project cards ---------- */
+
+.w-projects {
+  position: absolute;
+  inset: 0;
+}
+
+.w-card { display: contents; color: inherit; }
+
+.w-heading {
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  margin: 0;
+  font-family: var(--font);
+  font-weight: 400;
+  font-size: 2.5cqw;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.w-img {
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  width: var(--w);
+  height: auto;
+  display: block;
+  user-select: none;
+  transition: opacity 0.2s ease;
+}
+
+.w-name {
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  margin: 0;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 400;
+  font-size: 1.875cqw;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.w-desc {
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  margin: 0;
+  font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+  font-size: 1.1719cqw;
+  line-height: 1.335;
+  white-space: nowrap;
+}
+
+.w-tag {
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  padding: 0 0.15em;
+  background: #bdedfc;
+  font-family: var(--font);
+  font-weight: 400;
+  font-size: 1.0938cqw;
+  line-height: 1.05;
+  letter-spacing: -0.085em;
+  white-space: nowrap;
+}
+
+.w-card:hover .w-img { opacity: 0.85; }
+/* hovering a project grows its teal square out to highlight the whole name */
+.w-sq-proj {
+  height: 2cqw;
+  aspect-ratio: auto;
+  transition: width 0.4s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.w-card:hover .w-sq-proj,
+.w-card:focus-visible .w-sq-proj { width: var(--hl, 2%); }
+
+/* ===================================================
+   CASE-STUDY / PLAYGROUND PLACEHOLDER PAGES
+=================================================== */
+
+.case {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 5% 100px;
+}
+
+.case-head { margin-top: 60px; }
+
+.case-title {
+  margin: 0 0 18px;
+  font-family: var(--font);
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 1.2;
+}
+
+.case-desc {
+  margin: 0 0 18px;
+  max-width: 640px;
+  font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+  font-size: 20px;
+  line-height: 1.4;
+}
+
+.case-tags { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 36px; }
+
+.case-tag {
+  padding: 0 4px;
+  background: #bdedfc;
+  font-family: var(--font);
+  font-size: 14px;
+  line-height: 1.3;
+}
+
+.case-img { display: block; width: 100%; max-width: 760px; height: auto; margin-bottom: 40px; }
+
+.case-soon {
+  margin: 60px 0 0;
+  font-family: var(--font);
+  font-size: 18px;
+  color: var(--gray);
+}
+
+.case-back {
+  display: inline-block;
+  margin-top: 36px;
+  font-family: var(--font);
+  font-size: 16px;
+}
+
+.case-back:hover { opacity: 0.55; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .sb-slide { transition: none; }
+  .site-nav,
+  .site-nav .nav-work::after { transition: none; }
+}
+
+/* ===================================================
+   MOBILE — everything stacks into a single column.
+=================================================== */
+
+@media (max-width: 760px) {
+
+  .hero { position: relative; }
+
+  .site-nav {
+    position: fixed;
+    left: 0;
+    transform: none;
+    width: 100%;
+    height: 56px;
+    max-width: none;
+    container-type: normal;
+    background: var(--paper);
+  }
+
+
+  .site-nav nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+    font-size: 15px;
+  }
+
+  .site-nav a { position: static; }
+
+  .site-nav .nav-work::after { top: calc(100% + 4px); height: 2px; }
+
+  .sidebar {
+    position: static;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    container-type: normal;
+    pointer-events: auto;
+    padding: 28px 24px 8px;
+  }
+
+  .sb-slide {
+    position: static;
+    transform: none;
+    visibility: visible;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .sb-bg, .w-sq { display: none; }
+
+  .sb-slide > :not(.sb-bg) { opacity: 1; }
+
+  .work {
+    aspect-ratio: auto;
+    container-type: normal;
+    overflow: visible;
+    padding: 24px 24px 60px;
+  }
+
+  .w-projects { position: static; display: flex; flex-direction: column; }
+
+  .w-card {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+  }
+
+  .w-vertical { display: none; }
+
+  .w-hello, .w-blurb, .w-skills, .w-link,
+  .w-heading, .w-img, .w-name, .w-desc, .w-tag {
+    position: static;
+    white-space: normal;
+  }
+
+  .w-hello  { font-size: 16px; margin-bottom: 20px; }
+  .w-blurb  { font-size: 17px; margin-bottom: 24px; }
+  .w-blurb br, .w-desc br { display: none; }
+  .w-link   { font-size: 16px; margin-bottom: 14px; }
+  .w-skills { font-size: 16px; margin: 14px 0 20px; }
+
+  .w-heading { font-size: 24px; margin-bottom: 28px; }
+  .w-img     { width: 100%; }
+  .w-name    { font-size: 20px; margin-top: 12px; display: block; }
+  .w-desc    { font-size: 16px; margin-top: 6px; display: block; }
+  .w-tag     { display: inline-block; align-self: flex-start; font-size: 12px; margin-top: 8px; padding: 0 3px; }
+
+  .w-card .w-sq-proj { display: none; }
+}
+
+/* falling teal pixels: only in the strip between home and work.
+   The strip runs from 85% down the home page to 12% into the work page
+   (home page height = 0.65 x width, work page 1.0516 x width). */
+
+.pixel-gap {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(100vw, 2000px);
+  top: calc(min(100vw, 2000px) * 0.5525);
+  height: calc(min(100vw, 2000px) * 0.2237);
+  z-index: 1;
+  pointer-events: none;
+}
+
+@media (max-width: 760px) {
+  .pixel-gap { display: none; }
+}
+
+/* ===================================================
+   EMAIL OVERLAY — the address zooms in to fill the
+   screen, with a hint to exit once it has landed.
+=================================================== */
+
+.email-zoom {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: var(--teal);
+  opacity: 0;
+  visibility: hidden;
+  cursor: pointer;
+  outline: none;
+  --ox: 50vw;
+  --oy: 50vh;
+  transition: opacity 0.45s ease, visibility 0s linear 0.55s;
+}
+
+.email-zoom.open {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.35s ease;
+}
+
+.ez-text {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  white-space: nowrap;
+  font-family: var(--font);
+  font-size: 10vw;
+  line-height: 1;
+  color: #000000;
+  transform: translate(calc(-50% + var(--ox) - 50vw), calc(-50% + var(--oy) - 50vh)) scale(0.1);
+  transition: transform 0.55s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.email-zoom.open .ez-text {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.ez-hint {
+  position: absolute;
+  left: 50%;
+  bottom: 5vh;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  font-family: var(--font);
+  font-size: max(14px, 1.5vw);
+  color: #000000;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+}
+
+.email-zoom.open .ez-hint {
+  opacity: 1;
+  transition: opacity 0.4s ease 0.55s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .email-zoom,
+  .email-zoom.open,
+  .ez-text,
+  .ez-hint,
+  .email-zoom.open .ez-hint { transition: none; }
+}
