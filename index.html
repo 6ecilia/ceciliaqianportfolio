@@ -7,7 +7,7 @@
 <meta name="description" content="Cecilia Qian — product design &amp; product management portfolio.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Cormorant+Garamond:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Cormorant+Garamond:wght@400;500&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -37,7 +37,6 @@
   <span class="sq sq-e" aria-hidden="true"></span>
   <span class="sq sq-f" aria-hidden="true"></span>
   <span class="sq sq-g" aria-hidden="true"></span>
-  <span class="sq sq-h" aria-hidden="true"></span>
   <span class="sq sq-i" aria-hidden="true"></span>
   <span class="sq sq-j" aria-hidden="true"></span>
   <span class="sq sq-k" aria-hidden="true"></span>
@@ -47,21 +46,25 @@
 
   <!-- intro paragraph -->
   <p class="intro">
-    cecilia aspires to enter<br>
-    the product field through product<br>
-    management or design<br>
-    &mdash; communicating, connecting,<br>
+    cecilia aspires to enter the product field<br>
+    through product management and design &mdash;<br>
+    communicating, connecting,<br>
     and delivering a shared experience
   </p>
 
+  <p class="hero-caption">@YOSEMITE CURRY VILLAGE</p>
+
   <!-- image placeholder block -->
   <div class="hero-image">
-    <img class="hero-doodle hero-doodle-dog" src="assets/doodle-dog.png" alt="" draggable="false">
+    <img class="hero-bg" src="assets/hero-bg.png" alt="" draggable="false">
+    <img class="hero-art" src="assets/hero-art.png" alt="Illustration of people biking and walking on a forest path" draggable="false">
+    <span class="frame" aria-hidden="true"></span>
+    <span class="mk mk-tl" aria-hidden="true"></span>
+    <span class="mk mk-tr" aria-hidden="true"></span>
+    <span class="mk mk-bl" aria-hidden="true"></span>
+    <span class="mk mk-br" aria-hidden="true"></span>
     <canvas class="hero-canvas" aria-hidden="true"></canvas>
-    <button class="hero-clear" type="button" aria-label="Clear doodle">&#8635;</button>
   </div>
-
-  <span class="click-here">[doodle over the box]</span>
 
   <!-- big bracketed name -->
   <h1 class="hero-name">
@@ -250,8 +253,8 @@
   var root = document.documentElement;
   var hero = document.querySelector('.hero');
   var work = document.querySelector('.work');
-  var label = document.querySelector('.click-here');
-  if (!hero || !work || !label) return;
+  var box = document.querySelector('.hero-image');
+  if (!hero || !work || !box) return;
 
   var mobile = window.matchMedia('(max-width: 760px)');
   var startY = 0;
@@ -260,8 +263,8 @@
   function ease(t) { return t * t * (3 - 2 * t); }
 
   function measure() {
-    // start a little early: when the label reaches the header row
-    startY = label.getBoundingClientRect().bottom + window.scrollY - Math.min(window.innerWidth, 2000) * 0.15;
+    // start a little early, while the bottom of the teal box is still well on screen
+    startY = box.getBoundingClientRect().bottom + window.scrollY - Math.min(window.innerWidth, 2000) * 0.124;
   }
 
   function update() {
@@ -340,7 +343,7 @@
 
   function draw() {
     ctx.clearRect(0, 0, W, H);
-    ctx.fillStyle = '#D1E3E3';
+    ctx.fillStyle = '#C7E5E3';
     drops.forEach(function (d) {
       for (var k = 0; k < d.len; k++) {
         var row = Math.floor(d.y) + k;
