@@ -1,11 +1,11 @@
 /* ---------------------------------------------------
    cecilia qian — portfolio
-   font: Courier Prime (+ Cormorant Garamond for blurbs) | teal: #D1E3E3
+   font: Courier Prime (+ Cormorant Garamond for blurbs) | teal: #C7E5E3
 --------------------------------------------------- */
 
 :root {
-  --teal: #D1E3E3;
-  --paper: #F6F6F3;
+  --teal: #C7E5E3;
+  --paper: #FDFDF9;
   --ink: #111111;
   --gray: #3a3a3a;
   --font: 'Courier Prime', 'Courier New', Courier, monospace;
@@ -53,17 +53,16 @@ a {
   display: block;
 }
 
-.sq-a { left: -0.75%; top: 2.9%;   width: 2.6%; height: 4.0%; }
-.sq-b { left: -0.75%; top: 11.4%;  width: 2.6%; height: 4.0%; }
-.sq-c { left: 27.65%; top: 21.4%;  width: 2.1%; height: 3.2%; }
-.sq-d { left: 48.15%; top: 29.9%;  width: 2.3%; height: 3.5%; }
-.sq-e { left: 44.65%; top: 39.9%;  width: 2.3%; height: 3.5%; }
-.sq-f { left: 52.4%;  top: 53.6%;  width: 2.1%; height: 3.2%; }
-.sq-g { left: 59.6%;  top: 53.6%;  width: 2.1%; height: 3.2%; }
-.sq-h { left: 66.6%;  top: 65.0%;  width: 2.3%; height: 3.5%; }
-.sq-i { left: 97.5%;  top: 80.8%;  width: 2.5%; height: 3.85%; }
-.sq-j { left: 97.5%;  top: 88.3%;  width: 2.5%; height: 3.85%; }
-.sq-k { left: 97.5%;  top: 95.8%;  width: 2.5%; height: 3.85%; }
+.sq-a { left: 0;      top: 3.154%;  width: 2%; height: 3.077%; }
+.sq-b { left: 0;      top: 9.385%;  width: 2%; height: 3.077%; }
+.sq-c { left: 27.65%; top: 13%;     width: 2%; height: 3.077%; }
+.sq-d { left: 47.85%; top: 20.846%; width: 2%; height: 3.077%; }
+.sq-e { left: 41.75%; top: 23.231%; width: 2%; height: 3.077%; }
+.sq-f { left: 57.5%;  top: 48.462%; width: 2%; height: 3.077%; }
+.sq-g { left: 50%;    top: 53.615%; width: 2%; height: 3.077%; }
+.sq-i { left: 98%;    top: 81.308%; width: 2%; height: 3.077%; }
+.sq-j { left: 98%;    top: 87.538%; width: 2%; height: 3.077%; }
+.sq-k { left: 98%;    top: 93.77%;  width: 2%; height: 3.077%; }
 
 /* ---------- nav ---------- */
 
@@ -97,13 +96,13 @@ a {
 
 .contact-vertical {
   position: absolute;
-  left: 0.7%;
-  top: 34%;
+  left: 0.5%;
+  top: 37.15%;
   writing-mode: vertical-rl;
   transform: rotate(180deg);
-  font-size: 0.85cqw;
-  letter-spacing: 0.12em;
-  color: var(--gray);
+  font-size: 0.93cqw;
+  letter-spacing: 0.025em;
+  color: var(--ink);
   white-space: nowrap;
 }
 
@@ -116,27 +115,96 @@ a {
 
 .intro {
   position: absolute;
-  left: 5.25%;
-  top: 27.7%;
-  width: 39%;
+  left: 44.95%;
+  top: 60.9%;
   margin: 0;
-  font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
-  font-size: 2.15cqw;
-  line-height: 1.15;
+  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  font-weight: 400;
+  font-size: 1.2cqw;
+  line-height: 1.4;
+  white-space: nowrap;
+  transform: scaleX(1.176);
+  transform-origin: left top;
   color: var(--ink);
+}
+
+/* ---------- caption above the photo ---------- */
+
+.hero-caption {
+  position: absolute;
+  left: 5.95%;
+  top: 29.3%;
+  margin: 0;
+  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  font-weight: 400;
+  font-size: 0.85cqw;
+  line-height: 1;
+  white-space: nowrap;
+  color: var(--ink);
+  pointer-events: none;
 }
 
 /* ---------- image placeholder block ---------- */
 
 .hero-image {
   position: absolute;
-  left: 5.25%;
-  top: 50%;
-  width: 40%;
-  height: 30%;
-  background: var(--teal);
+  left: 4.95%;
+  top: 31.54%;
+  width: 36.9%;
+  height: 38.92%;
   user-select: none;
 }
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  opacity: 0.32;
+  pointer-events: none;
+  user-select: none;
+}
+
+.hero-art {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* dashed outline + a cross on each corner */
+.frame {
+  position: absolute;
+  inset: -1px;
+  pointer-events: none;
+  --dash: #708c8a;
+  background:
+    repeating-linear-gradient(90deg, var(--dash) 0 1.55cqw, transparent 0 3.1cqw) 2.35cqw 0 / calc(100% - 2.35cqw) 2px no-repeat,
+    repeating-linear-gradient(90deg, var(--dash) 0 1.55cqw, transparent 0 3.1cqw) 2.35cqw 100% / calc(100% - 2.35cqw) 2px no-repeat,
+    repeating-linear-gradient(180deg, var(--dash) 0 1.55cqw, transparent 0 3.1cqw) 0 2.35cqw / 2px calc(100% - 2.35cqw) no-repeat,
+    repeating-linear-gradient(180deg, var(--dash) 0 1.55cqw, transparent 0 3.1cqw) 100% 2.35cqw / 2px calc(100% - 2.35cqw) no-repeat;
+}
+
+.mk {
+  position: absolute;
+  width: 2.3cqw;
+  height: 2.3cqw;
+  pointer-events: none;
+  background:
+    linear-gradient(#000, #000) center / 100% 1px no-repeat,
+    linear-gradient(#000, #000) center / 1px 100% no-repeat;
+}
+
+.mk-tl { left: 0; top: 0; transform: translate(-50%, -50%); }
+.mk-tr { right: 0; top: 0; transform: translate(50%, -50%); }
+.mk-bl { left: 0; bottom: 0; transform: translate(-50%, 50%); }
+.mk-br { right: 0; bottom: 0; transform: translate(50%, 50%); }
 
 .hero-doodle {
   position: absolute;
@@ -150,8 +218,8 @@ a {
 }
 
 .hero-doodle-dog {
-  right: -2%;
-  top: -16%;
+  right: 7%;
+  top: -17%;
   height: 20%;
 }
 
@@ -173,7 +241,7 @@ a {
   min-height: 22px;
   border: 1.5px solid var(--ink);
   border-radius: 50%;
-  background: #f6f6f3cc;
+  background: #fdfdf9cc;
   color: var(--ink);
   font-family: var(--font);
   font-size: 1.3cqw;
@@ -192,8 +260,8 @@ a {
 
 .click-here {
   position: absolute;
-  right: 54.75%;
-  top: 80.6%;
+  right: 58.15%;
+  top: 72.5%;
   color: var(--ink);
   font-size: 1.6cqw;
   font-weight: 400;
@@ -222,21 +290,21 @@ a {
   position: absolute;
   display: flex;
   align-items: baseline;
-  font-size: 7.2cqw;
+  font-size: 7.5cqw;
   line-height: 1;
 }
 
 .hero-name .row1 {
-  left: 50.75%;
-  top: 35%;
-  gap: 1.4cqw;
+  left: 48.85%;
+  top: 32.1%;
+  gap: 0.8cqw;
   justify-content: flex-start;
 }
 
 .hero-name .row2 {
-  right: 1.75%;
-  top: 57.5%;
-  gap: 1.4cqw;
+  right: 4.15%;
+  top: 46.1%;
+  gap: 1.15cqw;
   justify-content: flex-end;
 }
 
@@ -260,7 +328,7 @@ a {
 
   .sq-i, .sq-j, .sq-k, .sq-a, .sq-b { display: none; }
 
-  .sq-c, .sq-d, .sq-e, .sq-f, .sq-g, .sq-h {
+  .sq-c, .sq-d, .sq-e, .sq-f, .sq-g {
     position: static;
     display: inline-block;
     width: 14px;
@@ -294,6 +362,7 @@ a {
   }
 
   .intro {
+    transform: none;
     position: static;
     width: 100%;
     font-size: 16px;
@@ -301,11 +370,27 @@ a {
     margin-bottom: 24px;
   }
 
+  .hero-caption {
+    position: static;
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+
   .hero-image {
     position: relative;
+    left: 0;
+    top: 0;
     width: 100%;
     height: 220px;
     margin-bottom: 16px;
+  }
+
+  .mk { display: none; }
+
+  .frame {
+    inset: 0;
+    background: none;
+    border: 1px dashed #708c8a;
   }
 
   .click-here {
@@ -400,15 +485,15 @@ a {
   position: absolute;
   inset: 0;
   font-family: var(--font);
-  font-size: 2.1cqw;
+  font-size: 2.5cqw;
   font-weight: 400;
-  letter-spacing: 0.02em;
+  letter-spacing: 0;
   line-height: 1;
 }
 
 .site-nav a {
   position: absolute;
-  top: 2.02cqw;
+  top: 2.17cqw;
   white-space: nowrap;
   color: var(--ink);
   pointer-events: none;
@@ -421,9 +506,9 @@ a {
 
 .site-nav a:hover { opacity: 0.55; }
 
-.site-nav .nav-about  { left: 50.3%; }
-.site-nav .nav-work   { left: 71%; }
-.site-nav .nav-resume { right: 1.75%; }
+.site-nav .nav-about  { left: 49.95%; }
+.site-nav .nav-work   { left: 71.25%; }
+.site-nav .nav-resume { right: 2%; }
 
 .site-nav .nav-work::after {
   content: "";
